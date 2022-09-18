@@ -1,0 +1,103 @@
+@use "styles/variables" as v;
+.navigation {
+  z-index: 100;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background: rgba(0, 0, 0, 0.767);
+  color: white;
+
+  .logo {
+    font-size: 2rem;
+    padding: 0.5rem;
+    .image {
+      overflow: hidden; 
+      height: 0;
+      padding-top: 56.25%;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    img {
+      border-radius: 5rem;
+    }
+  }
+  &_asside {
+    position: absolute;
+    display: none;
+  }
+  .hamburger {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &_line {
+      border-radius: 5rem;
+      width: 3.5rem;
+      height: 0.26rem;
+      margin-bottom: 0.5rem;
+      background-color: white;
+    }
+  }
+  &_list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 1.5rem;
+    list-style: none;
+  }
+  &_item {
+    a {
+      padding: 0 0.5rem;
+      &:hover {
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .navigation {
+    position: relative;
+    &_list {
+      display: none;
+    }
+    .logo {
+      font-size: 2rem;
+      padding: 1rem;
+    }
+    .hamburger {
+      opacity: 1;
+    }
+
+    &_asside {
+      @include v.glassmorphism;
+      width: 97%;
+      list-style: none;
+      display: flex;
+      align-self: center;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+      top: 6.5rem;
+      right: 0;
+      left: 0;
+      background: v.$color-secondary;
+      transition: cubic-bezier(0.075, 0.82, 0.165, 2);
+      transition-duration: 2s;
+    }
+    &_item {
+      margin: 0.5rem 0.5rem 0.5rem -2rem;
+      padding: 0.5rem;
+      font-size: 1.8rem;
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+}

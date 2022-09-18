@@ -1,0 +1,194 @@
+$color-primary: linear-gradient(
+  220deg,
+  rgb(62, 133, 247) 0%,
+  rgb(142, 62, 247) 100%
+);
+$color-secondary: linear-gradient(
+  to right bottom,
+  rgba(15, 15, 15, 0.92) 0%,
+  rgba(45, 45, 45, 0.99) 100%
+);
+
+$color-blue: #1890ff;
+$color-violet: rgb(196, 1, 217);
+
+$color-blueViolet: rgb(107, 9, 243);
+
+$color-green: rgba(22, 206, 34, 0.99);
+
+$color-green_gradient: radial-gradient(
+  circle,
+  rgba(22, 206, 34, 0.99) 0%,
+  rgb(47, 216, 21) 100%
+);
+$color-violet_gradient: linear-gradient(
+  to right top,
+  rgb(196, 1, 217) 0%,
+  rgba(195, 1, 217, 0.9) 100%
+  
+  
+);
+
+$color-black_gradient: radial-gradient(
+  circle,
+  rgb(57, 57, 57) 0%,
+  rgb(8, 8, 8) 100%
+);
+
+@mixin btn {
+  background: $color-primary;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1rem;
+  color: white;
+  &:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+}
+
+@mixin flexContainer {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+@mixin glassmorphism {
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(78, 80, 105, 0.37);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+@mixin glassmorphism__dark {
+  background: rgba(0, 0, 0, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(53, 53, 53, 0.18);
+}
+@mixin text__primary {
+  background: $color-primary;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin text__white {
+  background: white;
+  background-clip: text;
+  -webkit-text-fill-color: white;
+}
+
+@mixin slideInLeft {
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@mixin slideInRight {
+  animation-name: slideInRight;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@mixin slideToRight {
+  animation-name: slideToRight;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@mixin slideInDown {
+  animation-name: slideInDown;
+  animation-duration: 1.8s;
+  animation-fill-mode: both;
+}
+@mixin riseUp {
+  animation-name: riseUp;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+@mixin wave {
+  animation: wave 2s linear infinite;
+}
+
+@keyframes slideInLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideToRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+    display: inline;
+    visibility: visible;
+  }
+}
+@keyframes riseUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideInDown {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translateY(-10%);
+    transform: translateY(-10%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes wave {
+  0% {
+    transform: translateX(0) translateZ(0);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0);
+  }
+}

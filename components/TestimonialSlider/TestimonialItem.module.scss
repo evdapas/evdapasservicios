@@ -1,0 +1,84 @@
+@use "styles/variables" as v;
+
+.testimonials {
+  @include v.flexContainer;
+  width: 100%;
+  margin: 3rem auto;
+
+  img {
+    border-radius: 10rem;
+  }
+  .myCarousel {
+    background: #fafafa;
+    width: 80%;
+    margin: 3rem auto;
+    padding: 2rem;
+    height: 100%;
+    @include v.glassmorphism;
+    h1 {
+      color: v.$color-green;
+      letter-spacing: 0.05rem;
+      margin-bottom: 0.3rem;
+      text-transform: uppercase;
+      font-size: 1.3rem;
+    }
+
+    p {
+      font-weight: 400 !important;
+      line-height: 29px !important;
+      color: #222;
+      font-size: 1.1rem;
+      font-family: sans-serif;
+
+      &:before {
+        content: "“";
+        color: #aaa;
+        font-size: 1.5rem;
+        font-family: monospace;
+      }
+      &:after {
+        content: "”";
+        color: #aaa;
+        font-size: 1.5rem;
+        font-family: monospace;
+        line-height: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    .myCarousel {
+      width: 100%;
+      margin: 3rem auto;
+      padding: 2rem;
+      height: 100%;
+      h1 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-weight: 400 !important;
+        line-height: 29px !important;
+        color: #222;
+        font-size: 1rem;
+        font-family: sans-serif;
+
+        &:before {
+          content: "“";
+          color: #aaa;
+          font-size: 1.2rem;
+          font-family: monospace;
+        }
+        &:after {
+          content: "”";
+          color: #aaa;
+          font-size: 1.2rem;
+          font-family: monospace;
+          line-height: 0;
+        }
+      }
+    }
+  }
+}
