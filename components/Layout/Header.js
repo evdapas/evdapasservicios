@@ -8,7 +8,6 @@ export const navigation = [
   { name: "¿Quiénes Somos?", link: "/about" },
   { name: "Servicios", link: "/services" },
   { name: "Contacto", link: "/contact" },
-  
 ];
 
 function Header() {
@@ -24,8 +23,8 @@ function Header() {
             <Image
               layout="intrinsic"
               src="/images/laptop4.webp"
-              width="65"
-              height="65"
+              width="95"
+              height="64"
               alt="LOGO"
               priority
             />

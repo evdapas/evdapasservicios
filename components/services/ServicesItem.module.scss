@@ -21,3 +21,12 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .item {
+    width: 90%;
+    height: 25rem;
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+}

@@ -95,7 +95,7 @@ $color-black_gradient: radial-gradient(
 
 @mixin slideInLeft {
   animation-name: slideInLeft;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-fill-mode: both;
 }
 @mixin slideInRight {

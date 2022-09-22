@@ -24,3 +24,18 @@
     justify-content: center;
   }
 }
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    .title {
+      width: 90%;
+      font-size: 1.5rem;
+      padding: 0.5rem;
+      margin: 2rem;
+    }
+  }
+}
