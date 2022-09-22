@@ -1,8 +1,36 @@
-$color-primary: linear-gradient(
-  220deg,
-  rgb(62, 133, 247) 0%,
-  rgb(142, 62, 247) 100%
+///////nav
+$primary: rgb(6, 182, 212);
+// $primary: rgb(5, 2, 32);
+$primary-gradient: linear-gradient(
+  to left bottom,
+  rgb(67, 56, 202) 0%,
+  rgb(6, 182, 212) 100%
 );
+@mixin btn {
+  background: rgb(0, 162, 255);
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1rem;
+  color: white;
+  &:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+}
+
+$primary-black: linear-gradient(
+  220deg,
+  rgb(0, 0, 0) 0%,
+  rgba(0, 0, 0, 0.9) 100%
+);
+@mixin text__primary {
+  background: $primary-gradient;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+//////////////
 $color-secondary: linear-gradient(
   to right bottom,
   rgba(15, 15, 15, 0.92) 0%,
@@ -25,8 +53,6 @@ $color-violet_gradient: linear-gradient(
   to right top,
   rgb(196, 1, 217) 0%,
   rgba(195, 1, 217, 0.9) 100%
-  
-  
 );
 
 $color-black_gradient: radial-gradient(
@@ -34,20 +60,6 @@ $color-black_gradient: radial-gradient(
   rgb(57, 57, 57) 0%,
   rgb(8, 8, 8) 100%
 );
-
-@mixin btn {
-  background: $color-primary;
-  border-radius: 0.5rem;
-  padding: 0.8rem;
-  font-size: 1.5rem;
-  text-align: center;
-  margin: 1rem;
-  color: white;
-  &:hover {
-    transform: scale(1.03);
-    cursor: pointer;
-  }
-}
 
 @mixin flexContainer {
   display: flex;
@@ -74,11 +86,7 @@ $color-black_gradient: radial-gradient(
   border-radius: 0.5rem;
   border: 1px solid rgba(53, 53, 53, 0.18);
 }
-@mixin text__primary {
-  background: $color-primary;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 @mixin text__white {
   background: white;
   background-clip: text;
@@ -87,12 +95,12 @@ $color-black_gradient: radial-gradient(
 
 @mixin slideInLeft {
   animation-name: slideInLeft;
-  animation-duration: 1s;
+  animation-duration: 3s;
   animation-fill-mode: both;
 }
 @mixin slideInRight {
   animation-name: slideInRight;
-  animation-duration: 1s;
+  animation-duration: 3s;
   animation-fill-mode: both;
 }
 @mixin slideToRight {

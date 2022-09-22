@@ -5,8 +5,8 @@ import Card from "../ui/Card";
 function NotFound() {
   return (
     <Card>
-      <h1>Az oldal nem található</h1>
-      <Button href="/">Vissza a főoldalra</Button>
+      <h1>Página no encontrada</h1>
+      <Button href="/">Volver a la página principal</Button>
     </Card>
   );
 }

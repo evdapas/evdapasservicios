@@ -1,0 +1,125 @@
+@use "styles/variables" as v;
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 2rem auto;
+
+  .form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    padding: 2rem;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    @include v.glassmorphism;
+    background-color: rgba(220, 236, 245, 0.4);
+
+    h1 {
+      font-size: 3rem;
+      margin: 2rem auto;
+      @include v.text__primary;
+    }
+    input,
+    textarea {
+      padding: 2rem 0;
+
+      box-shadow: 4px 4px 6px 2px rgb(197, 197, 197);
+      &:focus {
+        outline: none;
+        border: none;
+        box-shadow: 2px 3px 8px 4px rgba(110, 171, 224, 0.5);
+      }
+    }
+
+    label,
+    input,
+    textarea {
+      font-family: sans-serif;
+      font-size: 1.3rem;
+      width: 80%;
+      display: block;
+      margin: 0.3rem auto;
+      padding: 0.1rem 0;
+      border-radius: 0.4rem;
+      border: none;
+    }
+    .btn {
+      display: block;
+      width: 10rem;
+      margin: 2rem auto;
+      padding: 0.8rem;
+      background: v.$primary-gradient;
+      box-shadow: 2px 5px 20px 1px rgba(0, 0, 0, 0.37);
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1.5rem;
+      text-align: center;
+      color: white;
+      &:hover {
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+  .informations {
+    display: flex;
+    flex-direction: column;
+    @include v.glassmorphism;
+    background-color: rgba(220, 236, 245, 0.4);
+    border-radius: 0.5rem;
+    width: 80%;
+    color: v.$primary;
+    @include v.text__primary;
+    font-size: 1.3rem;
+    padding: 3rem;
+    margin: 2rem auto;
+    p {
+      font-size: 1.5rem;
+    }
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0.3rem;
+      .icon {
+        margin: 0.5rem;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+    }
+    .form {
+      width: 100%;
+      padding: 1.1rem;
+      label,
+      input,
+      textarea {
+        width: 100%;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .btn {
+        margin-top: 2rem;
+      }
+    }
+    .informations {
+      width: 100%;
+      padding: 1.1rem;
+    }
+  }
+}

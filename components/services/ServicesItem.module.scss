@@ -1,0 +1,23 @@
+@use "styles/variables" as v;
+
+.item {
+  width: 33rem;
+  height: 35rem;
+  @include v.glassmorphism;
+  padding: 0.5rem;
+  margin: 1rem;
+  text-align: center;
+  display: grid;
+  align-content: space-between;
+
+  h1 {
+    @include v.text__primary;
+    text-transform: uppercase;
+  }
+
+  &_link {
+    img {
+      border-radius: 0.5rem;
+    }
+  }
+}

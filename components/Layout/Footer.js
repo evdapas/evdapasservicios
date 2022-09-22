@@ -39,17 +39,16 @@ function Footer() {
         </a>
       </div>
 
-      <ul className={classes.footer_links}>
+      <div className={classes.footer_links}>
         {navigation.map((nav) => (
-          <li key={nav.name} className={classes.footer_links__item}>
+          <div key={nav.name} className={classes.footer_links__item}>
             <Link href={nav.link}>{nav.name}</Link>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
 
       <div className={classes.footer_copy}>
-        <p>&copy; DIXWEBS</p>
-        <p>Website Design & Development</p>
+        <p>&copy; Evdapas servicios y mantenimiento SRl</p>
         <p>{dynamicFooterDate}</p>
       </div>
     </footer>

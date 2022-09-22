@@ -1,0 +1,47 @@
+@use "styles/variables" as v;
+
+.aboutItem {
+  @include v.glassmorphism;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  width: 30rem;
+  height: 30rem;
+  padding: 1.5rem;
+  text-align: center;
+  margin: 2rem;
+  h1 {
+    @include v.text__primary;
+  }
+  p {
+    font-size: 1.5rem;
+    @include v.glassmorphism;
+    padding: 1.5rem;
+  }
+  .icon {
+    width: 40%;
+    height: 100%;
+    font-size: 4.5rem;
+    color: v.$primary;
+    @include v.glassmorphism;
+
+    &:hover {
+      color: white;
+      cursor: pointer;
+      background: v.$primary-gradient;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .aboutItem {
+    width: 23rem;
+    height: 32rem;
+    margin: 2rem;
+    padding: 2rem;
+    p {
+      font-size: 1.3rem;
+    }
+  }
+}

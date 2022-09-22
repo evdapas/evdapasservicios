@@ -3,13 +3,12 @@ import React, { useState } from "react";
 import classes from "./Header.module.scss";
 import Image from "next/image";
 
-
 export const navigation = [
-  { name: "Főoldal", link: "/" },
-  { name: "Rólunk", link: "/about" },
-  { name: "Munkáink", link: "/munkaink" },
-  { name: "Kapcsolat", link: "/contact" },
-  { name: "Blog", link: "/posts" },
+  { name: "Inicio", link: "/" },
+  { name: "¿Quiénes Somos?", link: "/about" },
+  { name: "Servicios", link: "/services" },
+  { name: "Contacto", link: "/contact" },
+  
 ];
 
 function Header() {
@@ -24,7 +23,7 @@ function Header() {
           <a className={classes.image}>
             <Image
               layout="intrinsic"
-              src="/images/logo_dixwebs.webp"
+              src="/images/laptop4.webp"
               width="65"
               height="65"
               alt="LOGO"
@@ -45,7 +44,6 @@ function Header() {
             <Link href={nav.link}>{nav.name}</Link>
           </li>
         ))}
-       
       </ul>
       {navbarOpen && (
         <ul className={classes.navigation_asside}>

@@ -1,0 +1,49 @@
+@use "styles/variables" as v;
+
+.cta {
+  display: flex;
+  flex-direction: row;
+  margin: 4rem auto;
+  padding: 2rem;
+  justify-content: center;
+  justify-items: center;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 50%;
+    margin: 2rem;
+    p {
+      font-size: 1.5rem;
+    }
+    .btn {
+      width: 40%;
+      margin: 1.5rem;
+      justify-self: flex-end;
+    }
+  }
+  .image {
+    width: 50%;
+    height: 100%;
+    margin: 2rem;
+    @include v.glassmorphism;
+    img {
+      border-radius: 0.5rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .cta {
+    flex-wrap: wrap;
+    padding: 0.2rem;
+    .content {
+      width: 100%;
+      margin: 1rem;
+    }
+    .image {
+      width: 100%;
+    }
+  }
+}
